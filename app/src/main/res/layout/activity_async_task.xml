@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xueyan.personal.updateui.AsyncTaskActivity">
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="图片下载
+AsyncTask更新UI" />
+
+    <ImageView
+        android:src="@mipmap/aaaa"
+        android:layout_below="@+id/text"
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button"
+        android:onClick="onClick"
+       android:layout_marginTop="10dp"
+        android:layout_below="@+id/image"
+        android:text="点击下载更新"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+
+        android:id="@+id/progress"
+        android:layout_below="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xueyan.personal.MainActivity">
+
+    <com.xueyan.personal.view.SideslipView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DCF6DC"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/head"
+                layout="@layout/layout_title"></include>
+
+            <com.xueyan.personal.view.CircleImageView
+                android:id="@+id/imageHead"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:src="@mipmap/aaaa"
+                app:civ_border_color="#ffffff"
+                app:civ_border_overlay="true"
+                app:civ_border_width="2dp"
+                app:civ_fill_color="@color/colorAccent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edit_name"
+                    android:layout_alignBottom="@+id/edit_name"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:padding="10dp"
+                    android:text="昵 称"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_toRightOf="@+id/text_name"
+                    android:background="@drawable/editselect"
+                    android:cursorVisible="false"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:hint="鎏嫣宫守护"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:paddingRight="20dp" />
+
+                <TextView
+                    android:id="@+id/textsex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edit_sex"
+                    android:layout_alignBottom="@+id/edit_sex"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:padding="10dp"
+                    android:text="性 别"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/edit_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_name"
+                    android:layout_marginRight="30dp"
+                    android:layout_toRightOf="@+id/textsex"
+                    android:background="@drawable/editselect"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:paddingRight="20dp"
+                    android:text="男" />
+
+                <TextView
+                    android:id="@+id/text_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textsex"
+                    android:padding="10dp"
+                    android:text="年 龄"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/edit_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_sex"
+                    android:layout_marginRight="30dp"
+                    android:layout_toRightOf="@+id/textsex"
+                    android:background="@drawable/editselect"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:paddingRight="20dp"
+                    android:text="19" />
+
+                <TextView
+                    android:id="@+id/text_qrcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_age"
+                    android:padding="10dp"
+                    android:paddingRight="20dp"
+                    android:text="二维码" />
+
+                <ImageView
+                    android:id="@+id/qrcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/edit_age"
+                    android:layout_marginRight="30dp"
+                    android:layout_toRightOf="@+id/text_qrcode"
+                    android:src="@mipmap/qrcode" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/qrcode2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/edit_age"
+                android:layout_toRightOf="@+id/text_qrcode"
+                android:paddingTop="10dp"
+                android:src="@mipmap/qrcode" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#FAE1C6"
+            android:orientation="vertical">
+
+            <com.xueyan.personal.view.CircleImageView
+                android:id="@+id/rightHeadView"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/aaaa"
+                app:civ_border_color="#ffffff"
+                app:civ_border_overlay="true"
+                app:civ_border_width="2dp"
+                app:civ_fill_color="@color/colorAccent" />
+        </LinearLayout>
+
+    </com.xueyan.personal.view.SideslipView>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
