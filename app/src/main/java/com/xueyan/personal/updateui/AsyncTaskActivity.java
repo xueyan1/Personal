@@ -13,14 +13,15 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.xueyan.personal.R;
+import com.xueyan.personal.util.Util;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import java.io.IOException;
 
+/*使用AsyncTask更新ui*/
 public class AsyncTaskActivity extends Activity {
     private ImageView imageView;
     private ProgressBar progressBar;
@@ -35,6 +36,12 @@ public class AsyncTaskActivity extends Activity {
         progressBar= (ProgressBar) findViewById(R.id.progress);
         button= (Button) findViewById(R.id.button);
 
+        Bitmap download = Util.getBitmap(this, "download");
+        if (download==null) {
+            imageView.setImageResource(R.mipmap.aaaa);
+        }else {
+            imageView.setImageBitmap(download);
+        }
     }
 
     public void onClick(View view) {
@@ -62,6 +69,7 @@ public class AsyncTaskActivity extends Activity {
             try {
                 HttpResponse hr = hc.execute(hg);
                 bm = BitmapFactory.decodeStream(hr.getEntity().getContent());
+                Util.saveDate(AsyncTaskActivity.this,bm,"download");    //保存下图片
             } catch (Exception e) {
                 e.printStackTrace();
                 return null;
@@ -82,6 +90,7 @@ public class AsyncTaskActivity extends Activity {
                 Toast.makeText(AsyncTaskActivity.this, "成功获取图片", Toast.LENGTH_LONG).show();
                 imageView.setImageBitmap(bitmap);
             }else {
+                imageView.setImageResource(R.mipmap.butterfly);
                 Toast.makeText(AsyncTaskActivity.this, "获取图片失败", Toast.LENGTH_LONG).show();
             }
         }

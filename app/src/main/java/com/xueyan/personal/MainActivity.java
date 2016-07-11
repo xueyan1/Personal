@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.xueyan.personal.qrcode.ImageUtil;
 import com.xueyan.personal.qrcode.QRCodeUtil;
 import com.xueyan.personal.updateui.AsyncTaskActivity;
+import com.xueyan.personal.updateui.ThreadHandlerActivity;
 import com.xueyan.personal.util.SharedPreferencesUtil;
 import com.xueyan.personal.view.CircleImageView;
 import com.xueyan.personal.util.Util;
@@ -198,10 +199,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }).start();
                 break;
             case R.id.qrcode2:
-              //  final Intent intent = new Intent(this, WifiActivity.class);
-                final Intent intent = new Intent(this, AsyncTaskActivity.class);
+              //  final Intent intent = new Intent(this, WifiActivity.class);               //跳转到查看无线网密码
+               // final Intent intent = new Intent(this, AsyncTaskActivity.class);          //异步下载图片
+                final Intent intent = new Intent(this, ThreadHandlerActivity.class);    //线程下载图片，Handler更新UI
                 startActivity(intent);
-
                 break;
 
         }

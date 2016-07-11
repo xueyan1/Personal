@@ -11,8 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="图片下载
-AsyncTask更新UI" />
+        android:text="图片下载\nAsyncTask更新UI" />
 
     <ImageView
         android:src="@mipmap/aaaa"
@@ -30,7 +29,6 @@ AsyncTask更新UI" />
         android:layout_height="wrap_content" />
 
     <ProgressBar
-
         android:id="@+id/progress"
         android:layout_below="@+id/button"
         android:layout_width="match_parent"
