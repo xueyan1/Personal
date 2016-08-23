@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.xueyan.personal.qrcode.ImageUtil;
 import com.xueyan.personal.qrcode.QRCodeUtil;
+import com.xueyan.personal.service.FloatService;
 import com.xueyan.personal.updateui.AsyncTaskActivity;
 import com.xueyan.personal.updateui.ThreadHandlerActivity;
 import com.xueyan.personal.util.SharedPreferencesUtil;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initView();
         setListener();
         initDate();
+        startService(new Intent(MainActivity.this, FloatService.class));
     }
 
     private void initDate() {
