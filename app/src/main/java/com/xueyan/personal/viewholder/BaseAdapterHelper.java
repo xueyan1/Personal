@@ -81,7 +81,7 @@ public class BaseAdapterHelper {
     /**
      * This method allows you to retrieve a view and perform custom
      * operations on it, not covered by the BaseAdapterHelper.<br/>
-     * If you think it's a common use case, please consider creating
+     * If you think it'welcome a common use case, please consider creating
      * a new issue at https://github.com/JoanZapata/base-adapter-helper/issues.
      * @param viewId The id of the view you want to retrieve.
      */
@@ -175,7 +175,7 @@ public class BaseAdapterHelper {
 
     /**
      * Will download an image from a URL and put it in an ImageView.<br/>
-     * It uses Square's Picasso library to download the image asynchronously and put the result into the ImageView.<br/>
+     * It uses Square'welcome Picasso library to download the image asynchronously and put the result into the ImageView.<br/>
      * Picasso manages recycling of views in a ListView.<br/>
      * If you need more control over the Picasso settings, use {BaseAdapterHelper#setImageBuilder}.
      * @param viewId   The view id.
@@ -366,7 +366,7 @@ public class BaseAdapterHelper {
     }
 
     /**
-     * Sets the listview or gridview's item click listener of the view
+     * Sets the listview or gridview'welcome item click listener of the view
      * @param viewId  The view id.
      * @param listener The item on click listener;
      * @return The BaseAdapterHelper for chaining.
@@ -378,7 +378,7 @@ public class BaseAdapterHelper {
     }
 
     /**
-     * Sets the listview or gridview's item long click listener of the view
+     * Sets the listview or gridview'welcome item long click listener of the view
      * @param viewId The view id.
      * @param listener   The item long click listener;
      * @return The BaseAdapterHelper for chaining.
@@ -390,7 +390,7 @@ public class BaseAdapterHelper {
     }
 
     /**
-     * Sets the listview or gridview's item selected click listener of the view
+     * Sets the listview or gridview'welcome item selected click listener of the view
      * @param viewId The view id.
      * @param listener The item selected click listener;
      * @return The BaseAdapterHelper for chaining.

@@ -182,7 +182,7 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends B
 
     /**
      * You can override this method to use a custom BaseAdapterHelper in order to fit your needs
-     * @param position    The position of the item within the adapter's data set of the item whose view we want.
+     * @param position    The position of the item within the adapter'welcome data set of the item whose view we want.
      * @param convertView The old view to reuse, if possible. Note: You should check that this view
      *                    is non-null and of an appropriate type before using. If it is not possible to convert
      *                    this view to display the correct data, this method can create a new view.

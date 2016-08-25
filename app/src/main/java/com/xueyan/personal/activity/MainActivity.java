@@ -1,4 +1,4 @@
-package com.xueyan.personal;
+package com.xueyan.personal.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -8,6 +8,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.os.Build;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,22 +21,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.xueyan.personal.R;
 import com.xueyan.personal.qrcode.ImageUtil;
 import com.xueyan.personal.qrcode.QRCodeUtil;
 import com.xueyan.personal.service.FloatService;
-import com.xueyan.personal.updateui.AsyncTaskActivity;
 import com.xueyan.personal.updateui.ThreadHandlerActivity;
 import com.xueyan.personal.util.SharedPreferencesUtil;
 import com.xueyan.personal.view.CircleImageView;
 import com.xueyan.personal.util.Util;
-import com.xueyan.personal.wifi.WifiActivity;
 
 import java.io.File;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, ImageUtil.CropHandler {
+public class MainActivity extends BaseActivity implements View.OnClickListener, ImageUtil.CropHandler {
     private ImageView back,qrcode,qrcode2;
     private TextView edit, title, edit_sex,edit_age;
     private EditText edit_name;

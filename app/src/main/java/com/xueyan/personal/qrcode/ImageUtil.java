@@ -43,7 +43,7 @@ public class ImageUtil {
             switch (requestCode) {
                 case RE_CAMERA:
                     if (data == null || data.getExtras() == null) {
-                        handler.onCropFailed("CropHandler's context MUST NOT be null!");
+                        handler.onCropFailed("CropHandler'welcome context MUST NOT be null!");
                         return;
                     }
                     photo = data.getExtras().getParcelable("data");
@@ -57,7 +57,7 @@ public class ImageUtil {
                     break;
                 case RE_GALLERY:
                     if (data == null || data.getExtras() == null) {
-                        handler.onCropFailed("CropHandler's context MUST NOT be null!");
+                        handler.onCropFailed("CropHandler'welcome context MUST NOT be null!");
                         return;
                     }
                     photo = data.getExtras().getParcelable("data");
@@ -75,7 +75,7 @@ public class ImageUtil {
                         handler.getContext().startActivityForResult(intent,
                                 RE_CAMERA);
                     } else {
-                        handler.onCropFailed("CropHandler's context MUST NOT be null!");
+                        handler.onCropFailed("CropHandler'welcome context MUST NOT be null!");
                     }
                     break;
                 case REQUEST_GALLERY:
@@ -89,7 +89,7 @@ public class ImageUtil {
                         handler.getContext().startActivityForResult(intent2,
                                 RE_GALLERY);
                     } else {
-                        handler.onCropFailed("CropHandler's context MUST NOT be null!");
+                        handler.onCropFailed("CropHandler'welcome context MUST NOT be null!");
                     }
                     break;
             }

@@ -1,7 +1,6 @@
 package com.xueyan.personal.floatview;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -9,12 +8,6 @@ import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.Toast;
-
-import com.xueyan.personal.MainActivity;
-import com.xueyan.personal.util.Util;
 
 /**
  * Created by Administrator on 2016/8/23.
