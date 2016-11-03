@@ -11,8 +11,6 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 
-import java.io.File;
-
 /**
  * Created by Administrator on 2016/8/25.
  */
@@ -44,6 +42,5 @@ public class PersonalApplication extends Application {
 
 
         ImageLoader.getInstance().init(config);//全局初始化此配置
-
     }
 }

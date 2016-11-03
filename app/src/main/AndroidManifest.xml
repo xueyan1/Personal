@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xueyan.personal">
+          package="com.xueyan.personal">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
         android:name=".PersonalApplication"
@@ -16,20 +16,30 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activity.WelcomeActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".wifi.WifiActivity" />
-        <activity android:name=".updateui.AsyncTaskActivity" />
-        <activity android:name=".updateui.ThreadHandlerActivity" />
+        <activity android:name=".wifi.WifiActivity"/>
+        <activity android:name=".updateui.AsyncTaskActivity"/>
+        <activity android:name=".updateui.ThreadHandlerActivity"/>
 
-        <service android:name=".service.FloatService" />
+        <service android:name=".service.FloatService"/>
 
-        <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.PersonalActivity" />
-        <activity android:name=".activity.BaseActivity"></activity>
+        <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.PersonalActivity"/>
+        <activity android:name=".activity.BaseActivity"/>
+        <activity android:name=".activity.GuideActivity">
+        </activity>
+
+        <service android:name=".service.MyService"/>
+        <receiver android:name=".receiver.TestReceiver"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.EDIT"/>
+            </intent-filter>>
+            </receiver>>
     </application>
 
 </manifest>

@@ -29,5 +29,9 @@ dependencies {
     compile files('libs/core-3.1.0.jar')
     compile files('libs/picasso-2.5.2.jar')
     compile project(':mylibrary')
-     compile files('libs/universal-image-loader-1.9.5.jar')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
 }

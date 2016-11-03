@@ -2,15 +2,11 @@ package com.xueyan.personal.activity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.xueyan.personal.R;
@@ -60,5 +56,6 @@ public class PersonalActivity extends BaseActivity {
 
     public void onClick(View view) {
         startActivity(new Intent(PersonalActivity.this, MainActivity.class));
+        finish();
     }
 }
